@@ -1,0 +1,28 @@
+<div class="row">
+
+    <form #formulaire="ngForm" *ngIf="personne" >
+        <label for="firstname">Nom: </label>
+        <input type="text" id="firstname" [(ngModel)]="personne.firstname"   name="firstname" class="form-control border-3" required>
+    
+        <label for="lastname">Prenom: </label>
+        <input type="text" id="lastname" [(ngModel)]="personne.lastname"  name="lastname" class="form-control border-3" required>
+    
+        <label for="email">Email: </label>
+        <input type="email" min="0" max="120" id="email" [(ngModel)]="personne.email" name="email"  class="form-control border-3" required>
+    
+        <label for="path">path </label>
+        <input type="text" id="path" [(ngModel)]="personne.path"  name="path"  class="form-control border-3"  >
+    
+        <label for="department">Departement: </label>
+        <input type="text" id="department" [(ngModel)]="personne.department"  name="department"  class="form-control border-3" required>
+    
+        <label for="job">Poste:  </label>
+        <input type="text" id="job" [(ngModel)]="personne.job"  name="job"  class="form-control border-3" required>
+    
+        <br>
+    
+        <button [disabled]="formulaire.invalid" (click)="updatePersonne()" class="btn btn-success">Envoyer</button>
+    
+    </form>
+    
+</div>

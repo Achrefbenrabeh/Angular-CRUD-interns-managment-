@@ -1,0 +1,9 @@
+<app-search class="search"></app-search>
+<div class="row">
+    <div class="col-md-6">
+      <app-liste-cv (selectedPersonne)="selectPersonne($event)" [personnes]="personnes"></app-liste-cv>    
+    </div>
+      <div class="col-md-6">
+        <app-detail-cv [personne]="selectedPersonne"></app-detail-cv>
+      </div>
+</div> 

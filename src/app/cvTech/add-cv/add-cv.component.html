@@ -1,0 +1,43 @@
+
+    <div *ngIf="errorMessage" class="alert alert-error">{{errorMessage}}</div>
+    
+    <div class="row">
+
+        <form #formulaire="ngForm" >
+            <label for="firstname">Nom: </label>
+            <input type="text" id="firstname" ngModel name="firstname" class="form-control border-3" required>
+        
+            <label for="lastname">Prenom: </label>
+            <input type="text" id="lastname" ngModel name="lastname" class="form-control border-3" required>
+        
+            <label for="email">Email: </label>
+            <input type="email" min="0" max="120" id="email" ngModel name="email"  class="form-control border-3" required>
+        
+            <label for="path">path </label>
+            <input type="text" id="path" ngModel name="path"  class="form-control border-3"  >
+        
+            <label for="department">Departement: </label>
+            <input type="text" id="department" ngModel name="department"  class="form-control border-3" required>
+        
+            <label for="job">Poste:  </label>
+            <input type="text" id="job" ngModel name="job"  class="form-control border-3" required>
+
+            <label for="datedebut">Date Debut:  </label>
+            <input type="text" id="datedebut" ngModel name="datedebut"  class="form-control border-3" required>
+
+            <label for="datefin">Date Fin:  </label>
+            <input type="text" id="datefin" ngModel name="datefin"  class="form-control border-3" required>
+
+            <label for="sujet">Sujet:  </label>
+            <input type="text" id="sujet" ngModel name="sujet"  class="form-control border-3" required>
+            
+        
+        
+            <br>
+        
+            <button [disabled]="formulaire.invalid" (click)="addPersonne(formulaire)" class="btn btn-success">Envoyer</button>
+        
+        </form>
+    
+    </div>
+

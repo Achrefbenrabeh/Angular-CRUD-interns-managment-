@@ -1,0 +1,16 @@
+<nav class="navbar">
+  <div class="logo">
+    <img [routerLink]="['']" routerLinkActive="active" src="assets/images/last.gif" />
+  </div>
+  <div class="links">
+    <a class="nav-link" aria-current="page" [routerLink]="['home']" routerLinkActive="active">Accueil</a>
+    <a class="nav-link" aria-current="page" [routerLink]="['cv']" routerLinkActive="active">Stagiaire List</a>
+    <a class="nav-link" aria-current="page" [routerLink]="['cv', 'add']" routerLinkActive="active">Ajout</a>
+  </div>
+  <a *ngIf="! service.islogged()" class="nav-link" aria-current="page" [routerLink]="['login']" routerLinkActive="active" class="join-link" ><span>Connecter</span></a>
+  <a *ngIf="service.islogged()" class="nav-link" aria-current="page" class="join-link" (click)="logout()" ><span>Deconnexion</span></a>
+
+
+
+
+</nav>

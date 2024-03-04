@@ -1,0 +1,14 @@
+
+    <input
+    type="text"
+     class="form-control border-3"
+     [(ngModel)]="chaine"
+     (keyup)="search()"
+     placeholder="chercher un stagiaire..">
+     
+  <ol>
+    <li *ngFor="let personne of searchResult"
+     class="list-group-item" (click)="selectPersonne(personne)">
+        <img src="{{personne.path |defaultImage}}" alt="{{personne.lastname}}" weight="50px" height="40px"> {{personne.lastname}} {{personne.firstname}}
+  </li>
+    </ol>

@@ -1,0 +1,11 @@
+.row {
+    padding: 40px;
+
+    background: radial-gradient(rgb(245, 234, 225), rgb(255, 255, 255));
+    margin-top: 40px;
+    border-radius: 6px;
+    box-shadow: 0 0 30px #0000002a;
+
+
+
+}
